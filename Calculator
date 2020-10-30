@@ -30,7 +30,6 @@ int main()
 
 // ЦЭ МОЁ
 
-
 #include <iostream>
 #include <cmath>
 
@@ -41,8 +40,12 @@ int main()
 	setlocale(LC_ALL, "RUS");
 
 	double number1,number2,summ, diff,sqrt1,sqrt2,degree;
-	int choise;
+	int choise, choise1;
 
+	bool selection = true;
+
+	do
+	{
 	cout << "Введите первое число: ";
 	cin >> number1;
 
@@ -54,7 +57,6 @@ int main()
 	cout << "2 - Разность." << endl;
 	cout << "3 - Возведение первого числа в степень вторго." << endl;
 	cout << "4 - Вычисление квадратного корня первого и второго числа." << endl;
-
 
 	cin >> choise;
 
@@ -81,7 +83,29 @@ int main()
 		cout << "Квадратный корень первого числа равен: " << sqrt1 << endl;
 		cout << "Квадратный корень второго числа равен: " << sqrt2 << endl;
 		break;
+
+	default: 
+		cout << "Вы ввели не корректное действие!" << endl;
+		break;
 	}
+
+	cout << "Хотите ли вы проодолжить? " << endl;
+		cout << "1 - да." << endl;
+		cout << "2 - нет." << endl;
+
+		cin >> choise1;
+
+		if(choise1 == 1)
+		{
+			selection = true; 
+		}
+		if(choise1 == 2)
+		{
+			selection = false;
+		}
+
+	}while(selection == true);
+	
 
 
 }
