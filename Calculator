@@ -106,6 +106,6 @@ int main()
 
 	}while(selection == true);
 	
-
+cout << "Спасибо за использование моим калькулятором))" << endl;
 
 }
